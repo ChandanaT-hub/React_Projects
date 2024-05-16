@@ -1,0 +1,29 @@
+.flex{
+    /* display: flex; */
+    width: 400px;
+    height: 530px;
+    background-color:antiquewhite;
+}
+.div{
+    display: flex;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+.textarea{
+    padding: 5px;
+    margin: 10px;
+    font-size: medium;
+    width: 350px;
+    height: 60px;
+    text-align: right;
+}

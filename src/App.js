@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+// import Pagination from './components/P1';
 import './App.css';
+import Counter from './components/Counter/Counter';
+import { useState } from 'react';
+// 
+
+
+//  simport PaginationTest from './components/P1/PaginationTest';
+import Todo from './components/ToDo/Todo';
+import Stopwatch from './components/Stopwatch/Stopwatch';
+import GamePlay from './components/DiceGame/GamePlay';
+import Startgame from './components/DiceGame/Startgame';
+import Weather from './components/Weather/Weather';
+import Calculator from './components/Calculator/Calculator';
+
 
 function App() {
+  const [isGameStarted, setIsGameStarted] = useState(false);
+  const toggleGamePlay = () =>{
+    setIsGameStarted ((prev)=>!prev)
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+   <Todo/>
+   <Counter/>
+   <Stopwatch/>
+   {isGameStarted ?<GamePlay/>:<Startgame toggle={toggleGamePlay}/>}
+  <Weather/>
+  <Calculator/>
+ 
+    </>
   );
 }
 
